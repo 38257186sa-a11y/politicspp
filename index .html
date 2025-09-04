@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Political Science Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Start Screen -->
+  <div id="start-screen">
+    <h1>Political Science Quiz</h1>
+    <label for="numQuestions">Number of Questions:</label>
+    <select id="numQuestions">
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
+      <option value="50">50</option>
+    </select>
+    <br>
+    <label><input type="checkbox" id="shuffleQ"> Shuffle Questions</label>
+    <br><br>
+    <button id="startBtn">Start Quiz</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz-screen" class="hidden">
+    <div id="qIndex"></div>
+    <div id="questionText"></div>
+    <div id="choices"></div>
+    <div class="nav">
+      <button id="prevBtn">Previous</button>
+      <button id="nextBtn">Next</button>
+      <button id="submitBtn">Submit</button>
+    </div>
+    <div class="progress">
+      <div id="progressFill"></div>
+    </div>
+  </div>
+
+  <!-- Result Screen -->
+  <div id="result-screen" class="hidden">
+    <h2>Your Results</h2>
+    <div id="resultText"></div>
+    <div id="breakdown"></div>
+    <button id="retryBtn">Retry</button>
+    <a id="shareLink" target="_blank">Share on Twitter</a>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
